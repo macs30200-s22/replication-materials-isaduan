@@ -1,11 +1,15 @@
 # Chinese Elite Nationalism: Supplemental Code
 
-The code and data in this repository is an example of a reproducible research workflow for the research project "Reading Chinese Elite Nationalism from Foreign Policy Scholarship on China-Japan Relations." The code is written in Python 3.7.13 and all of its dependencies can be installed by running the following in the terminal (with the `requirements.txt` file included in this repository):
+The code and data in this repository is an example of a reproducible research workflow for the research project "Reading Chinese Elite Nationalism from Foreign Policy Scholarship on China-Japan Relations." 
+
+## Set up Environment
+The code is written in Python 3.7.13 and all of its dependencies can be installed by running the following in the terminal (with the `requirements.txt` file included in this repository):
 
 ```
 pip install -r requirements.txt
 ```
 
+## Prepare Text Data
 Next, you can download the `raw_data` folder and unzip all files wihin the folder by running the following in the terminal:
 
 ```
