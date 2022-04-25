@@ -39,6 +39,6 @@ projection = analyze.project_word('日本', 'neg.txt', 'pos.txt')
 analyze.plot_projection('Japan', projection)
 ```
 
-![png](visuals/sentiment.png)
+![png](visuals/sentiments.png)
 
 This finding helps answer my research question: 'How does the construction of elite national identity evolve in Chinese scholarly discourse on China-Japan relations  since  2000?' It offers suggestive evidence that, negative sentiment towards Japan seems to correlate with a high degree of cohesiveness in identity construction among elites, whereas positive sentiment seems to correlate with a lack of cohesivness: negativity constrains the space of identity construction, making fewer stories of Self and Other legitimate and speakable. 
