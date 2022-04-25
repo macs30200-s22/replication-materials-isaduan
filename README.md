@@ -16,8 +16,12 @@ Next, you can download the `raw_data` folder and unzip all files wihin the folde
 upzip \*.zip
 ```
 
-Then, you can import the `preprocess` module located in this repository to reproduce the `text_data.csv` file and descriptive plots about the text data in the Jupyter Notebook `preprocess.ipynb`. 
+Then, you can import the `preprocess` module to reproduce the `text_data.csv` file and descriptive plots about the text data in the Jupyter Notebook `preprocess.ipynb`. 
 
-Alternatively, to replicate the analysis and produce all of the figures and quantitative analyses from the (hypothetical) publication that this code supplements, build and run the `Dockerfile` included in this repository via the instructions in the file).
+## Preliminary Analysis
 
-If you use this repository for a scientific publication, we would appreciate it if you cited the [Zenodo DOI](https://doi.org/10.5281/zenodo.6429151) (see the "Cite as" section on our Zenodo page for more details).
+Finally, you can use the `analyze` module to reproduce the preliminary analysis of the data using Doc2Vec and Word2Vec models in the Jupyter Notebook `analyze.ipynb`. In particular, the `plot_d2v_similarities` function generates a graph of average pairwise cosine similarity score for each year's documents, showing the degree of cohesiveness among the stories Chinese scholars tell about China-Japan relations.
+
+```
+data = analyze.prepare_d2v_documents('text_data.csv', 'stopwords-zh.txt')
+```
