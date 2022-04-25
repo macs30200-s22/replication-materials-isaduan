@@ -42,3 +42,9 @@ analyze.plot_projection('Japan', projection)
 ![png](visuals/sentiments.png)
 
 This finding helps answer my research question: 'How does the construction of elite national identity evolve in Chinese scholarly discourse on China-Japan relations  since  2000?' It offers suggestive evidence that, negative sentiment towards Japan seems to correlate with a high degree of cohesiveness in identity construction among elites, whereas positive sentiment seems to correlate with a lack of cohesivness: negativity constrains the space of identity construction, making fewer stories of Self and Other legitimate and speakable. 
+
+This is a pilot study which expects extended future research. If you use this repository for a scientific publication, I would appreciate it if you cited the project as:
+
+`
+Duan, Isabella. "Reading Chinese Elite Nationalism from Foreign Policy Scholarship on China-Japan Relations." (2022), GitHub repository, https://github.com/macs30200-s22/replication-materials-isaduan
+`
