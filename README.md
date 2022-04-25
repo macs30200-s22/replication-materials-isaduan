@@ -20,7 +20,7 @@ Then, you can import the `preprocess` module to reproduce the `text_data.csv` fi
 
 ## Preliminary Analysis
 
-Finally, you can use the `analyze` module to reproduce the preliminary analysis of the data using Doc2Vec and Word2Vec models in the Jupyter Notebook `analyze.ipynb`. In particular, the `plot_d2v_similarities` function generates a graph of average pairwise cosine similarity score for each year's documents, showing the degree of cohesiveness among the stories Chinese scholars tell about China-Japan relations.
+Finally, you can use the `analyze` module to reproduce the preliminary analysis of the data using Doc2Vec and Word2Vec models in the Jupyter Notebook `analyze.ipynb`. In particular, the `plot_d2v_similarities` function generates a graph of average pairwise cosine similarity score for each year's documents, showing the degree of cohesiveness among the stories Chinese scholars tell about China-Japan relations. The graph can be reproduced by running the following code:
 
 ```
 data = analyze.prepare_d2v_documents('text_data.csv', 'stopwords-zh.txt')
@@ -30,3 +30,15 @@ analyze.plot_d2v_similarities(similarities_lst, smooth=True)
 ```
 
 ![png](visuals/cohesiveness.png)
+
+
+Furthermore, the `plot_projection` function plots the movement of the word 'Japan' along a sentiment dimension of positive-negative across all years. The graph can be reproduced by running the following code:
+
+```
+projection = analyze.project_word('日本', 'neg.txt', 'pos.txt')
+analyze.plot_projection('Japan', projection)
+```
+
+![png](visuals/sentiment.png)
+
+This finding helps answer my research question: 'How does the construction of elite national identity evolve in Chinese scholarly discourse on China-Japan relations  since  2000?' It offers suggestive evidence that, negative sentiment towards Japan seems to correlate with a high degree of cohesiveness in identity construction among elites, whereas positive sentiment seems to correlate with a lack of cohesivness: negativity constrains the space of identity construction, making fewer stories of Self and Other legitimate and speakable. 
