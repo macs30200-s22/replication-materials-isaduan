@@ -46,7 +46,8 @@ This finding helps answer my research question: 'How does the construction of el
 This is a pilot study which expects extended future research. If you use this repository for a scientific publication, I would appreciate it if you cited the project as:
 
 ```
-Duan, Fengyu. "Reading Chinese Elite Nationalism from Foreign Policy Scholarship on China-Japan Relations." (2022), GitHub repository, https://github.com/macs30200-s22/replication-materials-isaduan
+Duan, Fengyu. "Reading Chinese Elite Nationalism from Foreign Policy Scholarship on China-Japan Relations." (2022), GitHub repository, 
+https://github.com/macs30200-s22/replication-materials-isaduan
 ```
 In BibTeX format:
 
