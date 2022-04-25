@@ -22,7 +22,7 @@ Then, you can import the `preprocess` module to reproduce the `text_data.csv` fi
 
 Finally, you can use the `analyze` module to reproduce the preliminary analysis of the data using Doc2Vec and Word2Vec models in the Jupyter Notebook `analyze.ipynb`. In particular, the `plot_d2v_similarities` function generates a graph of average pairwise cosine similarity score for each year's documents, showing the degree of cohesiveness among the stories Chinese scholars tell about China-Japan relations. The graph can be reproduced by running the following code:
 
-```
+```python 
 data = analyze.prepare_d2v_documents('text_data.csv', 'stopwords-zh.txt')
 D2V = analyze.train_best_d2v_model(data)
 similarities_lst = analyze.get_d2v_similarities(D2V, data)
@@ -34,7 +34,7 @@ analyze.plot_d2v_similarities(similarities_lst, smooth=True)
 
 Furthermore, the `plot_projection` function plots the movement of the word 'Japan' along a sentiment dimension of positive-negative across all years. The graph can be reproduced by running the following code:
 
-```
+```python 
 projection = analyze.project_word('日本', 'neg.txt', 'pos.txt')
 analyze.plot_projection('Japan', projection)
 ```
