@@ -24,4 +24,9 @@ Finally, you can use the `analyze` module to reproduce the preliminary analysis 
 
 ```
 data = analyze.prepare_d2v_documents('text_data.csv', 'stopwords-zh.txt')
+D2V = analyze.train_best_d2v_model(data)
+similarities_lst = analyze.get_d2v_similarities(D2V, data)
+analyze.plot_d2v_similarities(similarities_lst, smooth=True)
 ```
+
+![png](visuals/cohesiveness.png)
