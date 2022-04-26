@@ -13,7 +13,7 @@ pip install -r requirements.txt
 Next, you can download the `raw_data` folder and unzip all files wihin the folder by running the following in the terminal:
 
 ```
-upzip \*.zip
+unzip \*.zip
 ```
 
 Then, you can import the `preprocess` module to reproduce the `text_data.csv` file and descriptive plots about the text data in the Jupyter Notebook `preprocess.ipynb`. 
