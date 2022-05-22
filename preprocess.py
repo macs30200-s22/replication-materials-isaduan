@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 import os
 import re
 import jieba
@@ -7,6 +8,9 @@ jieba.load_userdict('jieba_dictionary.txt')
 import tika
 tika.initVM()
 from tika import parser
+
+sns.set(rc={'figure.figsize':(11.7,16)}, font_scale=1.3)
+sns.set_theme(style="dark")
 
 
 def get_dataframe(folder):
@@ -114,6 +118,51 @@ def plot_descriptive_stats(data, prev_total, post_total, graph_num):
         plt.title('Number of articles collected vs. successfully processed');
     
 
+def plot_sources_or_authors(filename, kind):
+    """
+    Plot the distribution of the sources or authors of journal articles.
+    file
+    Input:
+      filename: the file that stores the meta-data of articles, i.e. 'meta.txt'
+      kind: a string, either 'sources' or 'authors'
+    """
+    # extract sources and authors
+    meta = pd.read_csv(filename) 
+    authors = []
+    sources =[]
+    for i, row in meta.iterrows():
+        if re.match('Author-作者.+', row[0]):
+            authors.append(row[0])
+        if re.match('Source-文献来源.+', row[0]):
+            sources.append(row[0])
+                
+    if kind == 'sources':
+        new_sources = []
+        for x in sources:
+            new_sources.append(x[12:].strip())   
+        sources_df = pd.DataFrame({'source': new_sources})
+        sns.displot(sources_df.value_counts(), kind="kde", fill=True, \
+                    clip=(0, None));
+        plt.xlabel("Sources", fontsize=16)
+    
+    if kind == 'authors':
+        new_authors = []
+        for x in authors:
+            lst = x[12:-1].strip().split(';')
+            for author in lst:
+                new_authors.append(author)
+        authors_df = pd.DataFrame({'source': new_authors})
+        sns.displot(authors_df.value_counts(), kind="kde", fill=True, \
+                    clip=(0, None));
+        plt.xlabel("Authors", fontsize=16)
+    
+    plt.title("Density distribution of the {} of the articles".format(kind), fontsize=16)
+    plt.ylabel("Density", fontsize=16)
+    plt.show();
+
+    
+    
+
     if __name__ == "__main__":
         # When running script in Docker Container, first pre-process the data, 
         # save it as a csv file; then produce descriptive plots
@@ -131,3 +180,5 @@ def plot_descriptive_stats(data, prev_total, post_total, graph_num):
         data.to_csv('text_data.csv')
         for num in range(1, 4):
             plot_descriptive_stats(data, prev_total, post_total, num)
+            
+
