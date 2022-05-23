@@ -48,12 +48,15 @@ A T-SNE visualization of articles embeddings estimated by the Doc2Vec model can 
 ```python 
 analyze.plot_with_matplotlib(D2V, data, 2011, 2014)
 ```
+![png](visuals/tsne.png)
+
 
 Finally, the `run_x_y_regression` function performs a regression analysis examining how intellectual diversity changes in response to change in the texture of the bilateral relations. It offers suggestive evidence that, a more contentious relations between China and Japan correlates with more diversity of the scholarship. The regression analysis and graph can be reproduced by running the following code: 
 
 ```python 
 analyze.run_x_y_regression(diversity, "intellectual diversity", projection, "texture of bilateral relations", True).summary()
 ```
+![png](visuals/regression.png)
 
 This finding helps answer my research question: 'how does the texture of bilateral relations between China and Japan condition the intellectual diversity of Chinese scholarship on the subject from 2000 to 2021?' It supports a 'demand' theory of intellectual diversity, which challenges the longstanding conception of intellectual diversity and suggests an overlooked mechanism for authoritarian resilience. 
 
