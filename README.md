@@ -20,9 +20,9 @@ unzip \*.zip
 Then, you can import the `preprocess` module to reproduce the `text_data.csv` file and descriptive plots about the text data in the Jupyter Notebook `preprocess.ipynb`. 
 
 
-## Reproduce the Analysis
+## Reproduce Analysis
 
-Finally, you can use the `analyze` module to reproduce the preliminary analysis of the data using Doc2Vec and Word2Vec models in the Jupyter Notebook `analyze.ipynb`. 
+Finally, you can use the `analyze` module to reproduce the analysis of the data using Doc2Vec and Word2Vec models in the Jupyter Notebook `analyze.ipynb`. 
 
 In particular, the `plot_projection` function generates a graph of how the texture of China-Japan relations evolves from 2000 to 2021, that is, the movement of the word 'Japan' along a positive-negative sentiment dimension based on Word2Vec models trained on each year’s articles. The graph can be reproduced by running the following code:
 
