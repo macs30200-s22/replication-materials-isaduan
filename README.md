@@ -20,7 +20,7 @@ unzip \*.zip
 Then, you can import the `preprocess` module to reproduce the `text_data.csv` file and descriptive plots about the text data in the Jupyter Notebook `preprocess.ipynb`. 
 
 
-## Preliminary Analysis
+## Conduct the Analysis
 
 Finally, you can use the `analyze` module to reproduce the preliminary analysis of the data using Doc2Vec and Word2Vec models in the Jupyter Notebook `analyze.ipynb`. 
 
